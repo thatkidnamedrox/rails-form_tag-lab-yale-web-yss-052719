@@ -14,6 +14,7 @@ class StudentsController < ApplicationController
   def create
     puts params
     @student = Student.create(params["student"])
+    puts @student
     redirect_to student_path(@student)
   end
 
